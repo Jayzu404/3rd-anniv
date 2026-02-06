@@ -61,40 +61,6 @@ body {
   color: rgb(4, 111, 20);
 }
 
-.completion-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-
-.completion-container img {
-  width: 110px;
-}
-
-#timeline-btn {
-  padding: 18px 3rem;
-  background-color: #ec5276;
-  color: #fbe0e0;
-  font-size: clamp(7px, 2vw, 14px);
-  cursor: pointer;
-}
-
-#timeline-btn:hover {
-  background-color: #f66486;
-}
-
-#timeline-btn:active {
-  background-color: #fe9b9b;
-}
-
-@media screen and (max-width: 800px) {
-  .completion-container img {
-    width: 50px;
-  }
-}
-
 @media screen and (max-width: 800px) {
   #choices {
     flex-direction: column;

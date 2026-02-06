@@ -1,0 +1,33 @@
+const btn = document.getElementById('submit-btn');
+const input = document.getElementById('guess-input');
+const secretWord = 'asemco hilltop';
+const wrongMsg = document.querySelector('.wrong');
+
+let wrongMsgCount = 0;
+
+btn.addEventListener('click', () => {
+  if (input.value.toLowerCase() === secretWord) {
+    document.body.innerHTML = `
+      <div class="completion-container">
+        <img src='assets/images/calendar.gif' alt='calendar icon'>
+        <button id="timeline-btn">Timeline &rarr;</button>
+      </div>
+    `;
+    document.getElementById('timeline-btn').addEventListener('click', () => {
+      window.location.href = 'timeline.html';
+    });
+  } else {
+    wrongMsg.style.visibility = 'visible';
+
+    if (wrongMsgCount === 0) {
+      wrongMsg.innerText = 'wrong 😿';
+      wrongMsgCount++;
+    } else if (wrongMsgCount === 1) {
+      wrongMsg.innerText = 'wrong 😞';
+      wrongMsgCount++;
+    } else if (wrongMsgCount === 2) {
+      wrongMsg.innerText = 'wrong 🥲';
+      wrongMsgCount = 0;
+    }
+  }
+}); 
