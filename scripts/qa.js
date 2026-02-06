@@ -1,7 +1,7 @@
-const qaContainer = document.getElementById('q-a-container');
+const qAContainer = document.getElementById('q-a-container');
+const choices = document.getElementById('choices');
 const question = document.getElementById('question');
-const wrong = document.getElementById('wrong');
-const correct = document.getElementById('correct');
+const resultMsg = document.getElementById('result-msg');
 
 const questions = [
   {
@@ -32,7 +32,8 @@ let wrongEmojiIndex = 0;
 function loadQuestions(){
   if (currentIndex >= questions.length) {
     document.body.innerHTML = `
-      <div class="completion-btn">
+      <div class="completion-container">
+        <img src='assets/images/calendar.gif' alt='calendar icon'>
         <button id="timeline-btn">Timeline &rarr;</button>
       </div>
     `;
@@ -50,36 +51,44 @@ function loadQuestions(){
 
     button.addEventListener('click', () => checkAnswer(choice, questions[currentIndex].answer));
 
-    qaContainer.appendChild(button);
+    choices.appendChild(button);
   });
 }
 
 function checkAnswer(selected, answerIndex){
   if (selected === questions[currentIndex].choices[answerIndex]) {
     currentIndex++;
-    
-    wrong.style.visibility = 'hidden';
-    correct.style.visibility = 'visible';
 
-    correct.innerText = 'correct 😊';
+    resultMsg.classList.remove('wrong');
+    resultMsg.classList.add('correct');
+
+    resultMsg.style.visibility = 'visible'; // Show the result message
+
+    resultMsg.innerText = 'CORRECT 😊';
+    
     document.querySelectorAll('#q-a-container button').forEach(button => button.remove());
+    document.querySelector('#q-a-container #question').innerHTML = '';
     
     setTimeout(() => {
-      correct.style.visibility = 'hidden';
+      resultMsg.style.visibility = 'hidden';
+      resultMsg.innerText = '';
+
       loadQuestions();
     }, 1000);
   } else {
-    wrong.style.visibility = 'visible';
-    correct.style.visibility = 'hidden';
+    resultMsg.classList.remove('correct');
+    resultMsg.classList.add('wrong');
+
+    resultMsg.style.visibility = 'visible'; // Show the result message
 
     if (wrongEmojiIndex === 0) {
-      wrong.innerText = 'wrong 😿';
+      resultMsg.innerText = 'wrong 😿';
       wrongEmojiIndex++;
     } else if (wrongEmojiIndex === 1) {
-      wrong.innerText = 'wrong 😞';
+      resultMsg.innerText = 'wrong 😞';
       wrongEmojiIndex++;
     } else if (wrongEmojiIndex === 2) {
-      wrong.innerText = 'wrong 🥲';
+      resultMsg.innerText = 'wrong 🥲';
       wrongEmojiIndex = 0;
     }
   }

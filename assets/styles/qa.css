@@ -13,65 +13,94 @@ body {
 }
 
 #q-a-container {
+  position: relative;
   text-align: center;
-  padding: 200px 0;
   width: 80%;
+  margin: auto 0;
 }
 
 #question {
-  
-  font-size: clamp(2rem, 2vw, 2.5rem);
+  font-size: clamp(10px, 6vw, 2.1rem);
   color: #4B3F72;
+  margin-bottom: 1rem;
 }
 
-#wrong {
-  visibility: hidden;
-  margin-top: 10px;
+#choices {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#choices button {
+  background-color: #ec5276;
+  color: aliceblue;
+  font-size: clamp(10px, 1vw + 5px, 16px);  margin-left: 10px;
+  padding: 0.8em 2em;
+  cursor: pointer;
+}
+
+#choices button:hover {
+  background-color: #f66486;
+}
+
+#result-msg {
+  position: absolute;
+  left: 50%;
+  top: -20%;
+  transform: translateX(-50%);
+  font-size: clamp(10px, 1vw + 5px, 16px);
+}
+
+.wrong {
   color: rgb(213, 75, 75);
 }
 
-#correct {
-  visibility: hidden;
-  margin-bottom: 40px;
-  color: rgb(75, 213, 96);
+.correct {
+  font-weight: 600;
+  font-size: 30px;
+  color: rgb(4, 111, 20);
 }
 
-.completion-btn {
+.completion-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 12px;
+}
+
+.completion-container img {
+  width: 110px;
 }
 
 #timeline-btn {
-  padding: 20px 4rem;
+  padding: 18px 3rem;
   background-color: #ec5276;
   color: #fbe0e0;
-  font-size: 1rem;
+  font-size: clamp(7px, 2vw, 14px);
   cursor: pointer;
 }
 
 #timeline-btn:hover {
-  background-color: #fd8888;
+  background-color: #f66486;
 }
 
 #timeline-btn:active {
   background-color: #fe9b9b;
 }
 
-#q-a-container button {
-  background-color: #ec5276;
-  color: aliceblue;
-  padding: 14px 50px;
-  margin-left: 10px;
-  cursor: pointer;
+@media screen and (max-width: 800px) {
+  .completion-container img {
+    width: 50px;
+  }
 }
 
-@media screen and (max-width: 500px) {
-  #q-a-container button {
-    display: block;
-    margin: auto ;
-    margin-bottom: 10px;
-    width: 100%;
-    font-size: 10px;
+@media screen and (max-width: 800px) {
+  #choices {
+    flex-direction: column;
+  }
+
+  #timeline-btn {
+    padding: 7px 20px;
   }
 }
