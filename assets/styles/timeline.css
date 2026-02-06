@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body {
+  background-color: #f9e1e1;
+  height: 100vh;
+  overflow: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.3rem;
+  color: #ec5276;
+}
+
+.timeline_wrapper {
+  background-color: white;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  color: red;
+  z-index: -999;
+}
+
+.date {
+  background-color: #ec5276;
+  border-radius: 20px;
+  height: 30px;
+  width: auto;
+  margin-bottom: 12px;
+  color: #fff;
+  text-align: center;
+  padding: 3px 25px;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3.2rem;
+}
+
+.photo-frame::before {
+  position: absolute;
+  content: '';
+  height: 12px;
+  width: 50px;
+  background-color: #ec5276;
+  top: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+}
+
+.photo-frame {
+  width: 90%;
+  border-radius: 4px;
+  background-color: #0e0d0de6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+  position: relative;
+  padding: 10px 10px 25px 10px;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+}
+
+.photo-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.photo-frame img {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.description h2, p{
+  text-align: center;
+}
+
+.description h2 {
+  color: #ec5276;
+}
+
+.description p {
+  font-style: italic;
+  color: #333;
+}
+
+.heart-img {
+  position: absolute;
+  animation: float 9s ease-in infinite;
+}
+
+ @keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2);
+    opacity: 0;
+  }
+ }
+
+ .countLink {
+  width: fit-content;
+  padding: 10px;
+  background-color: #ec5276;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+ }
+
+ .countLink:hover {
+  background-color: rgb(251, 145, 145);
+ }
+
+ .countLink:active {
+  background-color: #fe96ae;
+ }
+
+ @media (max-width: 760px) {
+  .photo-frame {
+    width: 100%;
+  }
+
+  button {
+    font-size: 10px;
+  }
+ }
