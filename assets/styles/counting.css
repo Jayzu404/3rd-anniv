@@ -94,8 +94,19 @@ span {
   .time-box {
     flex-direction: column;
   }
+}
 
+@media (max-width: 400px) {
   .next-prev {
+    flex-direction: column;
+    gap: 4px;
+  }
 
+  .next-prev a {
+    width: 100%;
+  }
+
+  .next-prev button {
+    width: 100%;
   }
 }
