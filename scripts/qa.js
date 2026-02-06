@@ -20,6 +20,11 @@ const questions = [
     answer: 2
   },
   {
+    question: 'What is my favorite anime?',
+    choices: ['Attack on Titan', 'Demon Slayer', 'My Hero Academia'],
+    answer: 0
+  },
+  {
     question: 'When was the exact date when we are officially together?',
     choices: ['January 20 2022', 'February 20 2023', 'March 20 2024'],
     answer: 1
