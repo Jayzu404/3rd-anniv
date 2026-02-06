@@ -15,35 +15,22 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: clamp(20px, 5vw, 40px);
   margin-bottom: 1.3rem;
   color: #ec5276;
 }
 
 .timeline_wrapper {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.774);
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
   border: none;
-  border-radius: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#floating-hearts {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  color: red;
-  z-index: -999;
 }
 
 .date {
@@ -69,7 +56,7 @@ h1 {
   content: '';
   height: 12px;
   width: 50px;
-  background-color: #ec5276;
+  background-color: #939192;
   top: 1;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -114,25 +101,9 @@ h1 {
   color: #333;
 }
 
-.heart-img {
-  position: absolute;
-  animation: float 9s ease-in infinite;
-}
-
- @keyframes float {
-  0% {
-    transform: translateY(100vh) scale(0.8);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) scale(1.2);
-    opacity: 0;
-  }
- }
-
  .countLink {
   width: fit-content;
-  padding: 10px;
+  padding: 10px 1rem;
   background-color: #ec5276;
   border: none;
   border-radius: 20px;
@@ -151,6 +122,11 @@ h1 {
  @media (max-width: 760px) {
   .photo-frame {
     width: 100%;
+  }
+
+  .date {
+    font-size: 12px;
+    height: fit-content;
   }
 
   button {
