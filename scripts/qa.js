@@ -36,15 +36,7 @@ let wrongEmojiIndex = 0;
 
 function loadQuestions(){
   if (currentIndex >= questions.length) {
-    document.body.innerHTML = `
-      <div class="completion-container">
-        <img src='assets/images/calendar.gif' alt='calendar icon'>
-        <button id="timeline-btn">Timeline &rarr;</button>
-      </div>
-    `;
-    document.getElementById('timeline-btn').addEventListener('click', () => {
-      window.location.href = 'timeline.html';
-    });
+    window.location.href = 'guess-it.html';
     return;
   }
 
