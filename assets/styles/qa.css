@@ -7,7 +7,7 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #FFD1DC, #FFE4E1);
+  background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
   display: flex;
   justify-content: center;
 }
@@ -21,7 +21,7 @@ body {
 
 #question {
   font-size: clamp(10px, 6vw, 2.1rem);
-  color: #4B3F72;
+  color: #4b3f72;
   margin-bottom: 1rem;
 }
 
@@ -34,7 +34,8 @@ body {
 #choices button {
   background-color: #ec5276;
   color: aliceblue;
-  font-size: clamp(10px, 1vw + 5px, 16px);  margin-left: 10px;
+  font-size: clamp(10px, 1vw + 5px, 16px);
+  margin-left: 10px;
   padding: 0.8em 2em;
   cursor: pointer;
 }

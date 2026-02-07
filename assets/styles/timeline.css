@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 body {
@@ -53,7 +53,7 @@ h1 {
 
 .photo-frame::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 12px;
   width: 50px;
   background-color: #939192;
@@ -88,7 +88,8 @@ h1 {
   margin-top: 20px;
 }
 
-.description h2, p{
+.description h2,
+p {
   text-align: center;
 }
 
@@ -101,7 +102,7 @@ h1 {
   color: #333;
 }
 
- .countLink {
+.countLink {
   width: fit-content;
   padding: 10px 1rem;
   background-color: #ec5276;
@@ -109,17 +110,17 @@ h1 {
   border-radius: 20px;
   color: #fff;
   cursor: pointer;
- }
+}
 
- .countLink:hover {
+.countLink:hover {
   background-color: rgb(251, 145, 145);
- }
+}
 
- .countLink:active {
+.countLink:active {
   background-color: #fe96ae;
- }
+}
 
- @media (max-width: 760px) {
+@media (max-width: 760px) {
   .photo-frame {
     width: 100%;
   }
@@ -132,4 +133,4 @@ h1 {
   button {
     font-size: 10px;
   }
- }
+}

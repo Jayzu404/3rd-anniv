@@ -1,53 +1,70 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    background: #010205;
-    color: white;
-    font-family: 'Georgia', serif;
-    touch-action: none;
-  }
-  canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; }
-  
-  #message {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-    text-align: center;
-    z-index: 50;
-    pointer-events: none;
-    opacity: 0;
-    filter: blur(10px);
-    transition: all 4s ease;
-  }
-  #message.show { opacity: 1; filter: blur(0px); }
-  #message h1 {
-    font-size: clamp(1.4rem, 5vw, 2.2rem);
-    font-weight: 300;
-    letter-spacing: 5px;
-    color: #fff4d6;
-    text-shadow: 0 0 15px rgba(255, 244, 214, 0.4);
-  }
-  #startBtn {
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 15px 40px;
-    background: transparent;
-    color: #fff4d6;
-    border: 1px solid rgba(255, 244, 214, 0.2);
-    border-radius: 40px;
-    cursor: pointer;
-    z-index: 100;
-    letter-spacing: 3px;
-    transition: 0.4s;
-    outline: none;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #010205;
+  color: white;
+  font-family: "Georgia", serif;
+  touch-action: none;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
 
-  @media (max-width: 500px) {
-    #startBtn { padding: 10px 40px; font-size: 10px; }
+#message {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  text-align: center;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0;
+  filter: blur(10px);
+  transition: all 4s ease;
+}
+#message.show {
+  opacity: 1;
+  filter: blur(0px);
+}
+#message h1 {
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  font-weight: 300;
+  letter-spacing: 5px;
+  color: #fff4d6;
+  text-shadow: 0 0 15px rgba(255, 244, 214, 0.4);
+}
+#startBtn {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 40px;
+  background: transparent;
+  color: #fff4d6;
+  border: 1px solid rgba(255, 244, 214, 0.2);
+  border-radius: 40px;
+  cursor: pointer;
+  z-index: 100;
+  letter-spacing: 3px;
+  transition: 0.4s;
+  outline: none;
+}
+
+@media (max-width: 500px) {
+  #startBtn {
+    padding: 10px 40px;
+    font-size: 10px;
   }
+}

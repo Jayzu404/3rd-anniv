@@ -1,42 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/styles/style.css">
-  <title>Passcode</title>
-</head>
-<body>
-
-  <div class="wrapper">
-    <span id="hmmp"></span>
-    <h2>Enter passcode</h2>
-    <span><b>hint</b>: our <em>3rd anniversary</em> date mm/dd/yy</span>
-    <div class="input-holder">
-      <input id="input" type="text" readonly>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Passcode</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <span id="hmmp"></span>
+      <h2>Enter passcode</h2>
+      <span><b>hint</b>: our <em>3rd anniversary</em> date mm/dd/yy</span>
+      <div class="input-holder">
+        <input id="input" type="text" readonly />
+      </div>
+      <div class="buttons-wrapper">
+        <div class="button-group">
+          <button class="ans-btn">0</button>
+          <button class="ans-btn">1</button>
+          <button class="ans-btn">2</button>
+          <button class="ans-btn">3</button>
+          <button class="ans-btn">4</button>
+        </div>
+        <div class="button-group">
+          <button class="ans-btn">5</button>
+          <button class="ans-btn">6</button>
+          <button class="ans-btn">7</button>
+          <button class="ans-btn">8</button>
+          <button class="ans-btn">9</button>
+        </div>
+        <div class="del-enter">
+          <button id="del-btn">DELETE</button>
+          <button id="enter-btn">ENTER</button>
+        </div>
+      </div>
     </div>
-    <div class="buttons-wrapper">
-      <div class="button-group">
-        <button class="ans-btn">0</button>
-        <button class="ans-btn">1</button>
-        <button class="ans-btn">2</button>
-        <button class="ans-btn">3</button>
-        <button class="ans-btn">4</button>
-      </div>
-      <div class="button-group">
-        <button class="ans-btn">5</button>
-        <button class="ans-btn">6</button>
-        <button class="ans-btn">7</button>
-        <button class="ans-btn">8</button>
-        <button class="ans-btn">9</button>
-      </div>
-      <div class="del-enter">
-        <button id="del-btn">DELETE</button>
-        <button id="enter-btn">ENTER</button>
-      </div>
-    </div>
-  </div>
 
-  <script src="scripts/script.js"></script>
-</body>
+    <script src="scripts/script.js"></script>
+  </body>
 </html>

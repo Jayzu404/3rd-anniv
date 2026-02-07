@@ -6,7 +6,7 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #FFD1DC, #FFE4E1);
+  background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,7 +104,6 @@ body {
   }
 }
 
-
 @media (max-width: 300px) {
   .word-container {
     width: 90%;
@@ -115,7 +114,7 @@ body {
   }
 
   .input-container {
-    width: 90%; 
+    width: 90%;
   }
 
   .input-container input {

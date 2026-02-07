@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #FFD1DC, #FFE4E1);
+  background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -23,13 +23,13 @@ body {
 }
 
 h2 {
-  color: #4B3F72; /* Deep romantic plum */
+  color: #4b3f72; /* Deep romantic plum */
   font-size: clamp(30px, 5vw, 60px);
   margin-top: 10px;
 }
 
 span {
-  color: #7E6A9C; /* Muted lavender-gray */
+  color: #7e6a9c; /* Muted lavender-gray */
   font-size: clamp(10px, 1vw, 14px);
   margin-top: 10px;
   text-align: center;
@@ -46,10 +46,10 @@ span {
   text-align: center;
   font-size: 1.3rem;
   font-weight: bold;
-  border: 2px solid #FF85B3;
+  border: 2px solid #ff85b3;
   border-radius: 10px;
-  color: #5F4B66;
-  background-color: #FADADD;
+  color: #5f4b66;
+  background-color: #fadadd;
 }
 
 .buttons-wrapper button {
@@ -59,13 +59,13 @@ span {
   border-radius: 10px;
   font-size: 1em;
   cursor: pointer;
-  background-color: #FF69B4;
-  color: #FFFFFF;
+  background-color: #ff69b4;
+  color: #ffffff;
   transition: background-color 0.3s ease;
 }
 
 .buttons-wrapper button:hover {
-  background-color: #FF85B3;
+  background-color: #ff85b3;
 }
 
 .button-group {
@@ -85,16 +85,16 @@ span {
   width: 100px;
   font-size: 10px;
   border-radius: 10px;
-  background-color: #FF69B4;
-  color: #FFFFFF;
+  background-color: #ff69b4;
+  color: #ffffff;
 }
 
 .del-enter button:hover {
-  background-color: #FF85B3;
+  background-color: #ff85b3;
 }
 
 .del-enter button:active {
-  background-color: #FF69B4;
+  background-color: #ff69b4;
 }
 
 @media screen and (max-width: 600px) {
