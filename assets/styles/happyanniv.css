@@ -39,11 +39,18 @@ canvas {
   filter: blur(0px);
 }
 #message h1 {
-  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  font-size: clamp(1.6rem, 4.5vw, 2.6rem);
   font-weight: 300;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   color: #fff4d6;
-  text-shadow: 0 0 15px rgba(255, 244, 214, 0.4);
+  text-shadow: 0 0 15px rgba(255, 244, 214, 0.35);
+}
+#message p {
+  margin-top: 0.4rem;
+  font-size: clamp(0.85rem, 2.2vw, 1.2rem);
+  font-weight: 300;
+  color: #fff4d6;
+  text-shadow: 0 0 10px rgba(255, 244, 214, 0.25);
 }
 #startBtn {
   position: absolute;
