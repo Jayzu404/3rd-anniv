@@ -1,69 +1,66 @@
 const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d', { alpha: false });
-  const btn = document.getElementById('startBtn');
-  const msg = document.getElementById('message');
+const ctx = canvas.getContext('2d', { alpha: false });
+const btn = document.getElementById('startBtn');
+const msg = document.getElementById('message');
 
-  // --- AUDIO SETUP ---
-  const bgMusic = new Audio('assets/Enchanted.mp3');
-  bgMusic.loop = true; // Makes the song repeat
+// --- AUDIO SETUP ---
+const bgMusic = new Audio('assets/Enchanted.mp3');
+bgMusic.loop = true; // Makes the song repeat
 
-  let width, height;
-  let stars = [], particles = [], rockets = [];
+let width, height;
+let stars = [], particles = [], rockets = [];
 
-  function resize() {
-    width = window.innerWidth;
-    height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
-    initStars();
-  }
+function resize() {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  canvas.width = width;
+  canvas.height = height;
+  initStars();
+}
 
-  function initStars() {
-    stars = [];
-    const count = Math.min(width / 3, 140); 
-    for (let i = 0; i < count; i++) {
-      stars.push({ 
-        x: Math.random() * width, 
-        y: Math.random() * height, 
-        s: Math.random() * 1.5 + 0.2, 
-        phase: Math.random() * Math.PI * 2, 
-        speed: 0.008 + Math.random() * 0.01 
-      });
-    }
-  }
-
-  window.addEventListener('resize', resize);
-  resize();
-
-  function drawRealisticMoon() {
-    const mx = width * 0.82;
-    const my = height * 0.15;
-    const radius = 35;
-
-    ctx.save();
-    const atmosphere = ctx.createRadialGradient(mx, my, radius, mx, my, radius * 1.8);
-    atmosphere.addColorStop(0, 'rgba(200, 220, 255, 0.12)');
-    atmosphere.addColorStop(1, 'rgba(0, 0, 0, 0)');
-    ctx.fillStyle = atmosphere;
-    ctx.beginPath(); ctx.arc(mx, my, radius * 1.8, 0, Math.PI * 2); ctx.fill();
-
-    ctx.fillStyle = "#e6e6e6";
-    ctx.beginPath(); ctx.arc(mx, my, radius, 0, Math.PI * 2); ctx.fill();
-
-    ctx.fillStyle = "rgba(0, 0, 0, 0.06)";
-    [[-8, -10, 8], [10, 5, 6], [-5, 12, 5], [5, -15, 4]].forEach(c => {
-        ctx.beginPath();
-        ctx.arc(mx + c[0], my + c[1], c[2], 0, Math.PI * 2);
-        ctx.fill();
+function initStars() {
+  stars = [];
+  const count = Math.min(width / 3, 140); 
+  for (let i = 0; i < count; i++) {
+    stars.push({ 
+    x: Math.random() * width, 
+    y: Math.random() * height, 
+    s: Math.random() * 1.5 + 0.2, 
+    phase: Math.random() * Math.PI * 2, 
+    speed: 0.008 + Math.random() * 0.01 
     });
-
-    const shadow = ctx.createRadialGradient(mx - radius*0.3, my - radius*0.3, radius, mx, my, radius * 1.1);
-    shadow.addColorStop(0, 'rgba(0, 0, 0, 0)');
-    shadow.addColorStop(1, 'rgba(0, 0, 0, 0.25)');
-    ctx.fillStyle = shadow;
-    ctx.beginPath(); ctx.arc(mx, my, radius, 0, Math.PI * 2); ctx.fill();
-    ctx.restore();
   }
+}
+
+window.addEventListener('resize', resize);
+resize();
+
+function drawRealisticMoon() {
+  const mx = width * 0.82;
+  const my = height * 0.15;
+  const radius = 35;
+  ctx.save();
+  const atmosphere = ctx.createRadialGradient(mx, my, radius, mx, my, radius * 1.8);
+  atmosphere.addColorStop(0, 'rgba(200, 220, 255, 0.12)');
+  atmosphere.addColorStop(1, 'rgba(0, 0, 0, 0)');
+  ctx.fillStyle = atmosphere;
+  ctx.beginPath(); ctx.arc(mx, my, radius * 1.8, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = "#e6e6e6";
+  ctx.beginPath(); ctx.arc(mx, my, radius, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = "rgba(0, 0, 0, 0.06)";
+  [[-8, -10, 8], [10, 5, 6], [-5, 12, 5], [5, -15, 4]].forEach(c => {
+    ctx.beginPath();
+    ctx.arc(mx + c[0], my + c[1], c[2], 0, Math.PI * 2);
+    ctx.fill();
+  });
+
+  const shadow = ctx.createRadialGradient(mx - radius*0.3, my - radius*0.3, radius, mx, my, radius * 1.1);
+  shadow.addColorStop(0, 'rgba(0, 0, 0, 0)');
+  shadow.addColorStop(1, 'rgba(0, 0, 0, 0.25)');
+  ctx.fillStyle = shadow;
+  ctx.beginPath(); ctx.arc(mx, my, radius, 0, Math.PI * 2); ctx.fill();
+  ctx.restore();
+}
 
   class ShootingStar {
     constructor() { this.active = false; }

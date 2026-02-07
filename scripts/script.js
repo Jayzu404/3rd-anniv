@@ -20,6 +20,7 @@ delBtn.addEventListener('click', () => {
 
 enterBtn.addEventListener('click', () => {
   if(correctCode === inputField.value){
+    sessionStorage.setItem('isAuth', 'true');
     window.location.href = "qa.html";
   } else {
     countEntered++;
