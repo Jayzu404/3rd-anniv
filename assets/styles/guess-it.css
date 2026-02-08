@@ -49,53 +49,26 @@ body {
   width: 100%;
   padding: 8px;
   background-color: #ec5276;
+  border: none;
+  border-radius: 3px;
+  font-size: clamp(10px, 1vw + 5px, 16px);
   color: #fff;
   font-size: clamp(12px, 2.5vw, 16px);
   cursor: pointer;
 }
 
 .input-container button:hover {
-  background-color: #f66486;
+  background-color: #f26c8c;
 }
 
 .input-container button:active {
-  background-color: #d26767;
+  background-color: #d44868;
 }
 
 .wrong {
   visibility: hidden;
   color: rgb(213, 75, 75);
   font-size: 14px;
-}
-
-.completion-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-
-.completion-container img {
-  width: 110px;
-}
-
-#timeline-btn {
-  padding: 1em 2em;
-  background-color: #ec5276;
-  border: none;
-  border-radius: 15px;
-  color: #fbe0e0;
-  font-size: clamp(7px, 2vw, 14px);
-  cursor: pointer;
-}
-
-#timeline-btn:hover {
-  background-color: #f66486;
-}
-
-#timeline-btn:active {
-  background-color: #fe9b9b;
 }
 
 @media screen and (max-width: 800px) {

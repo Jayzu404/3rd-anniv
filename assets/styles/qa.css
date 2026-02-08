@@ -33,7 +33,9 @@ body {
 
 #choices button {
   background-color: #ec5276;
-  color: aliceblue;
+  color: #ffe4e1;
+  border: none;
+  border-radius: 3px;
   font-size: clamp(10px, 1vw + 5px, 16px);
   margin-left: 10px;
   padding: 0.8em 2em;
@@ -41,7 +43,11 @@ body {
 }
 
 #choices button:hover {
-  background-color: #f66486;
+  background-color: #f26c8c;
+}
+
+#choices button:active {
+  background-color: #d44868;
 }
 
 #result-msg {
