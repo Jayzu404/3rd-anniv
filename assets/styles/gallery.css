@@ -16,6 +16,27 @@ h1 {
   font-size: clamp(1rem, 5vw, 2rem);
 }
 
+.back-to-menu {
+  text-decoration: none;
+  position: fixed;
+  top: 2%;
+  left: 5%;
+  background-color: #ec5276;
+  color: #ffe4e1;
+  padding: 2px 15px;
+  border-radius: 10px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.back-to-menu:hover {
+  background-color: #f26c8c;
+}
+
+.back-to-menu:active {
+  background-color: #d44868;
+}
+
 .album {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -70,9 +91,21 @@ h1 {
   .album {
     padding: 20px 50px;
   }
+  .back-to-menu {
+    padding: 4px 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .back-to-menu {
+    padding: 2px 10px;
+  }
 }
 
 @media (max-width: 500px) {
+  .back-to-menu {
+    padding: 2px 10px;
+  }  
   .album {
     padding: 20px 30px;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));

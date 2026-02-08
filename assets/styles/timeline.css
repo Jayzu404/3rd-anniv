@@ -102,22 +102,31 @@ p {
   color: #333;
 }
 
-.countLink {
-  width: fit-content;
-  padding: 10px 1rem;
+.back-to-menu {
+  text-decoration: none;
+  position: fixed;
+  top: 2%;
+  left: 5%;
   background-color: #ec5276;
-  border: none;
-  border-radius: 20px;
-  color: #fff;
+  color: #ffe4e1;
+  padding: 2px 15px;
+  border-radius: 10px;
+  font-size: 10px;
   cursor: pointer;
 }
 
-.countLink:hover {
-  background-color: rgb(251, 145, 145);
+.back-to-menu:hover {
+  background-color: #f26c8c;
 }
 
-.countLink:active {
-  background-color: #fe96ae;
+.back-to-menu:active {
+  background-color: #d44868;
+}
+
+@media (min-width: 1024px) {
+  .back-to-menu {
+    padding: 4px 20px;
+  }  
 }
 
 @media (max-width: 760px) {
@@ -132,5 +141,15 @@ p {
 
   button {
     font-size: 10px;
+  }
+
+  .back-to-menu {
+    padding: 2px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .back-to-menu {
+    padding: 2px 10px;
   }
 }
