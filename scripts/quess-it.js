@@ -7,15 +7,7 @@ let wrongMsgCount = 0;
 
 btn.addEventListener("click", () => {
   if (input.value.toLowerCase() === secretWord) {
-    document.body.innerHTML = `
-      <div class="completion-container">
-        <img src='assets/images/calendar.gif' alt='calendar icon'>
-        <button id="timeline-btn">Timeline &rarr;</button>
-      </div>
-    `;
-    document.getElementById("timeline-btn").addEventListener("click", () => {
-      window.location.href = "timeline.html";
-    });
+    window.location.href = 'menu.html';
   } else {
     wrongMsg.style.visibility = "visible";
 
