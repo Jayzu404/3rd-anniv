@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9e1e1;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero img {
+  position: absolute;
+  top: 52%;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
+  letter-spacing: -0.8px;
+  line-height: 1.15; /* key for elegance */
+  text-align: center;
+  color: #4a2c2a;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* --- Background Animation Styles --- */
+/* --- Background Elements Container --- */
+.background-elements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* --- The Improved Minimal Cloud --- */
+.cloud {
+  position: absolute;
+  width: 100px;
+  height: 35px;
+  background: #ffffff;
+  border-radius: 100px; /* Makes it a smooth pill shape */
+  opacity: 0.5;
+  filter: blur(1px); /* Softens the edges for a cute look */
+  animation: cloud-float 6s ease-in-out infinite alternate;
+  animation-delay: var(--delay);
+}
+
+/* The bigger bubble on the left */
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit; /* Matches the parent color/opacity */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: -25px; /* Moves it up so it doesn't "sink" */
+  left: 15px;
+}
+
+/* The smaller bubble on the right */
+.cloud::before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: -18px; /* Adjusted to sit perfectly on the horizontal base */
+  left: 45px;
+  color: #4a2c2a;
+}
+
+/* Specific Cloud Animation (no rotation to keep it horizontal) */
+@keyframes cloud-float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+/* --- Smooth Floating Animation --- */
+@keyframes float-gentle {
+  from {
+    transform: translateY(0) rotate(-45deg) scale(1);
+  }
+  to {
+    transform: translateY(-25px) rotate(-40deg) scale(1.05);
+  }
+}
+
+.her {
+  padding: 2rem;
+  background-color: #edc7c7;
+}
+
+h2 {
+  font-family: 'Allura';
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.img-grid {
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 280px));
+  justify-content: center;
+  gap: 30px;
+}
+
+.img-con {
+  position: relative;
+  border: 12px solid rgb(243, 243, 243);
+}
+
+.img-con::before {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  height: 1rem;
+  width: 50px;
+  background-color: rgb(116, 111, 111);
+}
+
+.her img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: grab;
+}
+
+@media (max-width: 350px) {  
+  .her {
+    padding: 2rem;
+  }
+}
+
+.songs-for-you {
+  padding: 2rem;
+}
+
+.songs-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  grid-template-columns: repeat(3, minmax(200px, 350px));
+}
+
+.song-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.song-card .song-img-con {
+  background-color: pink;
+  border-radius: 4px;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+}
+
+.song-img-con img {
+  height: 100%;
+  width: 100%;
+}
+
+.artist, .artist-name {
+  text-align: center;
+}
+
+.artist {
+  font-weight: 500;
+}
+
+.artist-name {
+  font-size: 12px;
+}
+
+.song-card .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9e1e1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .img-grid {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .songs-grid {
+    grid-template-columns: 1fr; 
+  }
+}
