@@ -267,7 +267,7 @@ h2 {
   font-size: 12px;
 }
 
-.song-card .btn {
+.song-card .song-btn {
   display: flex;
   justify-content: center;
   align-items: center;
