@@ -9,6 +9,27 @@ body {
   background-color: #f9e1e1;
 }
 
+.back-to-menu {
+  text-decoration: none;
+  position: fixed;
+  top: 2%;
+  left: 5%;
+  background-color: #ec5276;
+  color: #ffe4e1;
+  padding: 2px 15px;
+  border-radius: 10px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.back-to-menu:hover {
+  background-color: #f26c8c;
+}
+
+.back-to-menu:active {
+  background-color: #d44868;
+}
+
 .hero {
   min-height: 100vh;
   padding: 14px;
