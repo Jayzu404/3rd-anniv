@@ -10,7 +10,6 @@ body {
 }
 
 .back-to-menu {
-  padding: 7px;
   text-decoration: none;
   position: fixed;
   top: 2%;
@@ -26,10 +25,6 @@ body {
   font-size: 10px;
   cursor: pointer;
   z-index: 10000;
-}
-
-.back-to-menu svg {
-  color: #ffffffe5;
 }
 
 .back-to-menu:hover {
@@ -263,50 +258,8 @@ h2 {
   grid-template-columns: repeat(3, minmax(200px, 350px));
 }
 
-.song-card {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.song-card .song-img-con {
-  background-color: pink;
-  border-radius: 4px;
-  height: 50px;
-  width: 50px;
-  overflow: hidden;
-}
-
-.song-img-con img {
-  height: 100%;
-  width: 100%;
-}
-
-.artist,
-.artist-name {
-  text-align: center;
-}
-
-.artist {
-  font-weight: 500;
-}
-
-.artist-name {
-  font-size: 12px;
-}
-
-.song-card .song-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9e1e1;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
+.spotify-embed {
+  border: none;
 }
 
 .gif {
@@ -337,7 +290,7 @@ footer p {
 }
 
 @media (max-width: 768px) {
- .img-grid {
+  .img-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
