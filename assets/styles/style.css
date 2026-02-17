@@ -100,12 +100,12 @@ span {
 @media screen and (max-width: 600px) {
   .buttons-wrapper button {
     width: 45px;
-    height: 30px;
-    font-size: 10px;
+    height: 40px;
+    font-size: 14px;
   }
 
   .del-enter button {
-    width: 80px;
-    font-size: 8px;
+    width: 85px;
+    font-size: 12px;
   }
 }
