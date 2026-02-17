@@ -10,6 +10,7 @@ body {
 }
 
 .back-to-menu {
+  padding: 7px;
   text-decoration: none;
   position: fixed;
   top: 2%;
@@ -25,6 +26,10 @@ body {
   font-size: 10px;
   cursor: pointer;
   z-index: 10000;
+}
+
+.back-to-menu svg {
+  color: #ffffffe5;
 }
 
 .back-to-menu:hover {
@@ -332,7 +337,7 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  .img-grid {
+ .img-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
