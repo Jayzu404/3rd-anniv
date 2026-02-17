@@ -135,6 +135,10 @@ p {
   background-color: #f26c8c;
 }
 
+.back-to-menu:hover svg {
+  color: #fff;
+}
+
 .back-to-menu:active {
   background-color: #d44868;
 }
