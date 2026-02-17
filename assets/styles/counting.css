@@ -67,6 +67,7 @@ p {
 
 span {
   color: #333;
+  font-size: clamp(1.2rem, 4vw, 2rem);
 }
 
 .wrapper .time-box {
@@ -77,6 +78,7 @@ span {
 
 .time-box div {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .next-prev button:hover {
