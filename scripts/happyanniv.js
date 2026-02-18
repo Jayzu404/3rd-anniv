@@ -4,7 +4,7 @@ const btn = document.getElementById("startBtn");
 const msg = document.getElementById("message");
 
 // --- AUDIO SETUP ---
-const bgMusic = new Audio("assets/Enchanted.mp3");
+const bgMusic = new Audio("assets/fireworks-bgm.mp3");
 bgMusic.loop = true; // Makes the song repeat
 
 let width, height;
