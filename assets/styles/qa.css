@@ -58,6 +58,10 @@ img {
   width: 200px;
 }
 
+.correct-gif {
+  width: 280px;
+}
+
 
 @media screen and (max-width: 800px) {
   #choices {
@@ -70,5 +74,9 @@ img {
 
   img {
     width: 130px;
+  }
+
+  .correct-gif {
+    width: 200px;
   }
 }

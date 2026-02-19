@@ -11,8 +11,8 @@ const questions = [
   },
   {
     question: "What is my favorite food?",
-    choices: ["Pizza", "Spicy Fried Chicken", "Burger"],
-    answer: 1,
+    choices: ["Caldereta", "Menudo", "Afritada"],
+    answer: 0,
   },
   {
     question: "What is my favorite movie genre?",
@@ -79,6 +79,7 @@ function loadQuestions() {
 function checkAnswer(selected, answerIndex) {
   if (selected === questions[currentIndex].choices[answerIndex]) {
     currentIndex++;
+    img.classList.add('correct-gif');
 
     if (currentIndex === 1) {
       img.src = 'assets/images/gif-correct1.gif';
@@ -101,7 +102,7 @@ function checkAnswer(selected, answerIndex) {
       loadQuestions();
     }, 1500);
   } else {
-
+    img.classList.remove('correct-gif');
     if (wrongEmojiIndex === 0) {
       img.src = 'assets/images/gif-wrong1.gif';
       wrongEmojiIndex++;
