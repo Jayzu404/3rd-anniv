@@ -155,11 +155,11 @@ class Rocket {
   constructor() {
     this.x = Math.random() * (width * 0.8) + width * 0.1;
     this.y = height + 10;
-    this.targetY = height * (0.2 + Math.random() * 0.3);
+    this.targetY = height * (0.1 + Math.random() * 0.3);
   }
   update() {
     let dist = this.y - this.targetY;
-    this.y -= dist * 0.008 + 0.8;
+    this.y -= dist * 0.005 + 0.15;
     if (dist < 3) {
       createChrysanthemumHeart(this.x, this.y);
       return false;
@@ -280,7 +280,7 @@ btn.onclick = () => {
         }, i * 300);
       }
     }
-  }, 4500);
+  }, 3000);
 
   rockets.push(new Rocket());
 };
