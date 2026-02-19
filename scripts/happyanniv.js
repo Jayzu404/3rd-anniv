@@ -159,7 +159,7 @@ class Rocket {
   }
   update() {
     let dist = this.y - this.targetY;
-    this.y -= dist * 0.005 + 0.15;
+    this.y -= dist * 0.008 + 1;
     if (dist < 3) {
       createChrysanthemumHeart(this.x, this.y);
       return false;
