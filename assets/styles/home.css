@@ -303,3 +303,9 @@ footer p {
     width: 150px;
   }
 }
+
+@media (max-width: 386px) {
+  .envelope {
+    margin-top: 20px;
+  }
+}
